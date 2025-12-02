@@ -197,11 +197,131 @@ img{
     font-size: 16px;
   }
 
+@media (max-width: 600px) {
+
+    /* NAV */
+    nav {
+        height: auto;
+        flex-direction: column;
+        padding: 10px 0;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .nav-itens {
+        flex-direction: space-between;
+        gap: 10px;
+    }
+
+    .nav-itens a {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+
+    /* SESSÃO PRINCIPAL */
+    .principal {
+        height: auto;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .texto-principal {
+        margin-top: 30px;
+        font-size: 26px;
+        text-align: left;
+    }
+
+    .btn {
+        width: 35%;
+        font-size: 18px;
+        padding: 15px;
+        
+    }
+
+
+    /* SOBRE */
+    .sobre {
+        padding: 30px 20px;
+        font-size: 15px;
+    }
+
+    .imagem-sobre {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+
+    /* EQUIPE */
+    .equipe-paragrafo {
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    .imagem-equipe {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagem-equipe img {
+        width: 60%;
+        margin-bottom: 15px;
+    }
+
+
+    /* SERVIÇOS */
+    .servicos {
+        padding: 20px 10px;
+    }
+
+    .preco {
+        font-size: 40px;
+    }
+
+    .listas {
+        font-size: 20px;
+        padding: 10px;
+        text-align: center;
+        
+    }
+
+
+    /* CONTATOS */
+    .contatos {
+        font-size: 22px;
+        padding: 20px;
+    }
+
+    .contatos a {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 8px;
+    }
+
+
+    /* RODAPÉ */
+    .footer {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
   
 
 
 
   
+
 
 
 
