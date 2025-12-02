@@ -54,7 +54,7 @@ nav{
 
 .principal{
     padding: 30px;
-    background-image: url(imagens/fundo2.jpg);
+    background-image: url(../imagens/fundo.jpg);
     height: 650px;
     background-size: cover; /* Imagem cobre tudo */
     background-repeat: no-repeat;
@@ -191,5 +191,6 @@ img{
     padding: 20px;
     font-size: 16px;
   }
+
 
   
