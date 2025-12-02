@@ -1,4 +1,5 @@
 
+
 /* Ajuste da pagina */
 *{
     padding: 0;
@@ -54,7 +55,7 @@ nav{
 
 .principal{
     padding: 30px;
-    background-image: url(../imagens/fundo.jpg);
+    background-image: url(imagens/fundo2.jpg);
     height: 650px;
     background-size: cover; /* Imagem cobre tudo */
     background-repeat: no-repeat;
@@ -164,6 +165,10 @@ img{
     list-style: none;
 }
 
+.listas li{
+    margin-bottom: 20px;
+}
+
 /* Sessão contatos */
 .contatos{
     font-size: 30px;
@@ -192,38 +197,10 @@ img{
     font-size: 16px;
   }
 
-@media (max-width: 1024px) {
-
-    .nav-itens a {
-        padding: 30px;
-        font-size: 18px;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-        padding: 10px;
-    }
-
-    .imagem-sobre,
-    .imagem-equipe {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .principal {
-        height: auto;
-        padding: 60px 20px;
-    }
-
-    .texto-principal {
-        font-size: 40px;
-        text-align: center;
-        margin-top: 50px;
-    }
-}
+  
 
 
 
   
+
 
