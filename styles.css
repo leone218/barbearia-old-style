@@ -1,0 +1,195 @@
+
+/* Ajuste da pagina */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* CABEÇALHO / NAVEGAÇÃO */
+
+/* Barra de navegação do site */
+nav{
+    height: 100px;
+    display: flex;
+    justify-content: space-around; /* Espaço entre logo e itens */
+    align-items: center;
+    background-color: #000000;
+    color: white;
+
+}
+
+/* Nome da barbearia */
+.logo{
+    font-weight: 700;
+    font-size: 30px;
+    font-family: "Abril Fatface", "Righteous", serif;
+    letter-spacing: 0.02em;
+}
+
+/* Lista dos itens do menu */
+.nav-itens{
+    list-style: none; 
+    display: flex; /* Itens lado a lado */
+    font-family: "Oswald", sans-serif; 
+}
+
+/* Links do menu */
+.nav-itens a{
+    padding: 65px; /* Espaçamento grande */
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+
+}
+
+.nav-itens a:hover{
+    color: green;  /* Cor ao passar o mouse */
+    text-decoration: underline;  /* Linha embaixo */
+}
+
+/* SESSÃO PRINCIPAL */
+
+.principal{
+    padding: 30px;
+    background-image: url(imagens/fundo2.jpg);
+    height: 650px;
+    background-size: cover; /* Imagem cobre tudo */
+    background-repeat: no-repeat;
+    background-position: center; /* Centraliza imagem */
+}
+
+/* Texto principal */
+.texto-principal{
+    margin-top: 120px;
+    font-size: 55px;
+    color: white;
+    text-align: justify;
+    font-family: "Oswald", sans-serif;
+}
+
+/* Botão de agendamento */
+.btn { 
+    padding: 20px 30px;
+    background: green;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background:rgb(1, 90, 1);
+}
+
+/* SESSÃO SOBRE */
+.sobre{
+    background-color: rgba(0, 128, 0, 0.782);
+    color: white;
+    padding: 50px;
+    font-size: 20px;
+    text-align: justify;
+    font-family: "Oswald", sans-serif;
+    
+}
+
+/* Título da sessão sobre */
+.sobre h2{
+    text-align: center;
+    padding: 20px;
+    font-family: "Oswald", sans-serif; 
+}
+
+/* Imagens gerais */
+img{
+    padding: 30px;
+    width: 700px;
+    height: 500px;
+    border-radius: 20px;  
+}
+
+/* Container das imagens da sessão sobre */
+.imagem-sobre{
+    display: flex;
+    gap: 10px; /* Espaço entre imagens */   
+}
+
+/* SESSÃO EQUIPE */
+
+.equipe-paragrafo{
+    padding: 50px;
+    font-size: 40px;
+    text-align: justify;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+}
+
+/* Container de fotos da equipe */
+.imagem-equipe{
+    display: flex;
+    gap: 5px;
+}
+
+/* Ajuste específico das imagens da equipe */
+.imagem-equipe img{
+    width: 400px;
+    border-radius: 40px;
+}
+
+/* SESSÃO SERVIÇOS */
+.servicos{
+    background-color: black;
+    font-family: "Oswald", sans-serif;
+}
+
+/* Titulo preço */
+.preco{
+    padding: 20px;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+   
+}
+
+/* Lista de serviços */
+.listas{
+    padding: 30px;
+    font-size: 30px;
+    color: white;
+    text-align: justify;
+    list-style: none;
+}
+
+/* Sessão contatos */
+.contatos{
+    font-size: 30px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0);
+    color: black;
+    text-align: center;
+}
+
+.contatos a {
+    padding: 10px; /* Espaço entre os links */
+    text-decoration: none;
+}
+
+.contatos a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+/* RODAPÉ */
+.footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  
