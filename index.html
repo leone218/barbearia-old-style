@@ -6,9 +6,8 @@
     <title>Barbearia Old Style</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Abril+Fatface&display=swap" rel="stylesheet">
-    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
-
 <body>
     <nav>
         <div class="logo">Barbearia Old Style</div>
@@ -38,7 +37,7 @@
             <h1 class="texto-principal">Viva uma experiência de cuidado <br>e elegância. Satisfação e precisão <br> em cada detalhe.</h1>
             <br>
 
-            <a href="#" id="whatsapp-link"> 
+            <a href="#agendamento">
                 <button class="btn">Agendamento</button>
             </a>
             
@@ -93,6 +92,41 @@
         </ul>
     </div>
 
+    <div id="agendamento" class="agendamento">
+        <h2>Agende seu horário</h2>
+
+        <form id="form-agendamento" class="form-agendamento">
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="tel" name="telefone" placeholder="Telefone (WhatsApp)" required>
+            <input type="date" name="data" required>
+            <select name="horario" required>
+                <option value="" disabled selected>Escolha um horário</option>
+                <option value="09:00">09:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+                <option value="17:00">17:00</option>
+                <option value="18:00">18:00</option>
+                <option value="19:00">19:00</option>
+            </select>
+            <select name="servico" required>
+                <option value="Corte">Corte</option>
+                <option value="Barba">Barba</option>
+                <option value="Corte e Barba">Corte e Barba</option>
+                <option value="Platinado">Platinado</option>
+                <option value="Sobrancelha">Sobrancelha</option>
+                <option value="Tratamento Facial">Tratamento Facial</option>
+                <option value="Hidratação Capilar">Hidratação Capilar</option>
+            </select>
+
+            <button type="submit" class="btn">Confirmar agendamento</button>
+            <p id="mensagem-agendamento"></p>
+        </form>
+    </div>
+
     <div id="contatos" class="contatos">
         <h2>Atendimento Seg a sex das 9h às 20h / sáb das 8h às 16h</h2>
 
@@ -102,8 +136,7 @@
     </div>
     <footer class="footer"><p>© 2025 Barbearia Oldy Style Desenvolvido por Leone — Todos os direitos reservados.</p></footer>
 
-<script src="agendamento.js"></script>
+    <script src="script.js"></script>
+    <script src="agendamento.js"></script>
 </body>
 </html>
-
- 
