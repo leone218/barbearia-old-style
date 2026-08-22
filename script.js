@@ -1,23 +1,48 @@
-// Aguarda o carregamento completo da página
-document.addEventListener("DOMContentLoaded", function() {
+/* ==========================================================
+   Conexão do formulário de agendamento com o Supabase.
+   Cole este arquivo como agendamento.js e inclua no HTML com:
+   <script src="agendamento.js"></script>
+   (depois da tag do supabase-js, veja agendamento-secao.html)
+   ========================================================== */
 
-    // Seleciona o link do botão "Agendamento"
-    const whatsappLink = document.getElementById("whatsapp-link");
+// TROQUE pelos valores do seu projeto (Project Settings > API)
+const SUPABASE_URL = https://tfnishpevzkqoazvtgyy.supabase.co;
+const SUPABASE_ANON_KEY = sb_publishable_iFccM5aDwe1vOuyD9oin1Q_ABJd6jvE;
 
-    // Número da barbearia (altere para o número real)
-    const numeroWhatsApp = "+5511999999999";
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-    // Mensagem que aparecerá automaticamente no WhatsApp
-    const mensagem = encodeURIComponent(
-        "Olá! Gostaria de agendar um horário na Barbearia Old Style."
-    );
+const formAgendamento = document.getElementById('form-agendamento');
+const mensagemAgendamento = document.getElementById('mensagem-agendamento');
 
-    // Monta a URL completa do WhatsApp
-    const urlWhatsApp = `https://wa.me/${numeroWhatsApp.replace(/\D/g, "")}?text=${mensagem}`;
+formAgendamento.addEventListener('submit', async (evento) => {
+  evento.preventDefault();
 
-    // Define o link no botão
-    whatsappLink.href = urlWhatsApp;
+  const dados = Object.fromEntries(new FormData(formAgendamento).entries());
 
-    // Abre em nova aba
-    whatsappLink.target = "_blank";
+  mensagemAgendamento.textContent = 'Enviando...';
+  mensagemAgendamento.style.color = '';
+
+  const { error } = await supabase.from('agendamentos').insert({
+    nome: dados.nome,
+    telefone: dados.telefone,
+    data: dados.data,
+    horario: dados.horario,
+    servico: dados.servico,
+  });
+
+  if (error) {
+    // Código 23505 = violação da regra "unique (data, horario)" que criamos no SQL
+    if (error.code === '23505') {
+      mensagemAgendamento.textContent = 'Esse horário já foi reservado. Escolha outro.';
+    } else {
+      mensagemAgendamento.textContent = 'Não foi possível agendar. Tente novamente.';
+      console.error(error);
+    }
+    mensagemAgendamento.style.color = '#b00020';
+    return;
+  }
+
+  mensagemAgendamento.textContent = 'Agendamento confirmado! Te esperamos.';
+  mensagemAgendamento.style.color = 'green';
+  formAgendamento.reset();
 });
